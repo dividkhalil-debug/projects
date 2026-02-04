@@ -101,6 +101,7 @@ const gameTitle = document.getElementById("game-title");
 // صوت الساعة
 const tickSound = new Audio("tick-short.wav");
 const correctSound = new Audio("correct.wav");
+const wrongSound = new Audio("wrong.wav");
 
 // ===============================
 // بدء اللعبة حسب السفر
@@ -208,6 +209,8 @@ function selectAnswer(index) {
     blinkButton(answerButtons[correctIndex], "green", 2, 200, delayedNext);
   } else {
     statusEl.innerHTML = `إجابة خاطئة!<br> الإجابة الصحيحة هي: ${q.answers[correctIndex]}`;
+    wrongSound.currentTime = 0;
+    wrongSound.play().catch(() => {});
     blinkButton(answerButtons[index], "red", 2, 200);
     blinkButton(answerButtons[correctIndex], "green", 2, 200, delayedNext);
   }
@@ -285,4 +288,5 @@ function goHome() {
   const timerContainer = document.querySelector(".timer-container");
   if (timerContainer) timerContainer.style.display = "block";
 }
+
 
