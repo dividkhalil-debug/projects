@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b3c5d, #02111d);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== صندوق اللعبة ===== */
+.game-container {
+  width: 90%;
+  max-width: 900px;
+  background: #0a2a43;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #f5c542;
+}
+
+/* ===== السؤال ===== */
+#question-box {
+  background: #061a2d;
+  border: 2px solid #f5c542;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+/* ===== الاجابات ===== */
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.answer {
+  background: linear-gradient(145deg, #0f4c75, #0b3c5d);
+  border: 2px solid #f5c542;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.answer:hover {
+  background: #f5c542;
+}
+
+
+#status {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===== عداد الوقت الدائري ===== */
+.timer-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+.timer-svg {
+  transform: rotate(-90deg);
+}
+
+.timer-bg {
+  fill: none;
+  stroke: #333;
+  stroke-width: 10;
+}
+
+.timer-circle {
+  fill: none;
+  stroke: #f5c542;
+  stroke-width: 10;
+  stroke-dasharray: 282.6; /* 2 * pi * r */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ============================= */
+/* ===== صفحة البداية ===== */
+/* ============================= */
+.home-container {
+  text-align: center;
+}
+
+.home-container h1 {
+  margin-bottom: 40px;
+  color: #f5c542;
+  font-size: 32px;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-buttons button {
+  background: linear-gradient(145deg, #0f4c75, #0b3c5d);
+  border: 2px solid #f5c542;
+  border-radius: 40px;
+  padding: 18px 40px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-buttons button:hover {
+  background: #f5c542;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.home-logo-text {
+  font-size: 48px; /* حجم النص */
+  font-weight: bold;
+  color: #fff; /* أبيض */
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0.5; /* الشفافية */
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+
+#back-home-btn {
+  background: linear-gradient(145deg, #0f4c75, #0b3c5d);
+  border: 2px solid #f5c542;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+#back-home-btn:hover {
+  background: #f5c542;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f5c542;
+}
+
+ 

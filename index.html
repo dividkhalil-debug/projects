@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من سيربح البونبون</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== صفحة البداية ===== -->
+  <div class="home-container" id="home">
+    <div class="home-logo-text">David Khalil</div>
+    <h1>اختر السفر</h1>
+
+    <div class="home-buttons">
+      <button onclick="startGame('zakaria')">
+        أسئلة على سفر زكريا
+      </button>
+
+      <button onclick="startGame('haggai')">
+        أسئلة على سفر حجّي
+      </button>
+
+      <button onclick="startGame('malachi')">
+        أسئلة على سفر ملاخي
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== صفحة اللعبة ===== -->
+  <div class="game-container" id="game" style="display:none;">
+    <h1 id="game-title">من سيربح البونبون</h1>
+
+    <!-- عداد الوقت الدائري -->
+    <div class="timer-container">
+      <svg class="timer-svg" width="100" height="100">
+        <circle class="timer-bg" cx="50" cy="50" r="45"></circle>
+        <circle class="timer-circle" cx="50" cy="50" r="45"></circle>
+      </svg>
+      <div class="timer-text" id="timer-text">20</div>
+    </div>
+
+    <!-- صندوق السؤال -->
+    <div id="question-box">
+      <p id="question">سؤال هيظهر هنا</p>
+    </div>
+
+    <!-- الاجابات -->
+    <div class="answers">
+      <button class="answer" onclick="selectAnswer(0)"></button>
+      <button class="answer" onclick="selectAnswer(1)"></button>
+      <button class="answer" onclick="selectAnswer(2)"></button>
+      <button class="answer" onclick="selectAnswer(3)"></button>
+      </div>
+      <!-- زر الرجوع لصفحة البداية -->
+      <button id="back-home-btn" onclick="goHome()">الرجوع لصفحة البداية</button>
+       <!-- حالة اللعبة -->
+      <p id="status"></p>
+    </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
