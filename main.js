@@ -137,6 +137,10 @@ function loadQuestion() {
     return;
   }
 
+  // تحديث عداد السؤال (الحالي / الإجمالي)
+  questionCounterEl.textContent =
+    `${currentQuestion + 1} / ${questions.length}`;
+
   const q = questions[currentQuestion];
   questionEl.textContent = q.q;
 
@@ -288,6 +292,7 @@ function goHome() {
   const timerContainer = document.querySelector(".timer-container");
   if (timerContainer) timerContainer.style.display = "block";
 }
+
 
 
 
