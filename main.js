@@ -90,7 +90,7 @@ let score = 0;
 let timeLeft = 20;
 let timer;
 const NEXT_DELAY = 1500;
-
+const questionCounterEl = document.getElementById("question-counter");
 const questionEl = document.getElementById("question");
 const answerButtons = document.querySelectorAll(".answer");
 const statusEl = document.getElementById("status");
@@ -292,6 +292,7 @@ function goHome() {
   const timerContainer = document.querySelector(".timer-container");
   if (timerContainer) timerContainer.style.display = "block";
 }
+
 
 
 
